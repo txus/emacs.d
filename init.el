@@ -1,8 +1,41 @@
-(require 'cask "~/.cask/cask.el")
-(cask-initialize)
-(require 'pallet)
-
 (add-to-list 'load-path "~/.emacs.d/config")
+
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+
+(if (require 'quelpa nil t)
+  t
+  ; (quelpa '(quelpa :repo "quelpa/quelpa" :fetcher github) :upgrade t) ; auto upgrade on startup
+  (with-temp-buffer
+    (url-insert-file-contents "https://raw.github.com/quelpa/quelpa/master/bootstrap.el")
+    (eval-buffer)))
+
+(quelpa 'color-theme-approximate)
+(quelpa 'evil)
+(quelpa 'evil-tabs)
+(quelpa 'evil-leader)
+(quelpa 'evil-search-highlight-persist)
+(quelpa 'projectile)
+(quelpa 'helm)
+(quelpa 'helm-projectile)
+(quelpa 'ace-jump-mode)
+(quelpa 'smooth-scrolling)
+(quelpa 'key-chord)
+(quelpa 'flycheck)
+(quelpa 'powerline-evil)
+(quelpa 'dtrt-indent)
+(quelpa 'autopair)
+(quelpa 'ag)
+(quelpa 'color-identifiers-mode)
+(quelpa 'rainbow-delimiters)
+(quelpa 'magit)
+(quelpa 'evil-paredit)
+(quelpa 'dash)
+(quelpa 'dash-at-point)
+(quelpa 'clojure-mode)
+(quelpa 'paredit)
+(quelpa 'cider)
 
 (load "00_basic.el")
 (load "01_badwolf.el")

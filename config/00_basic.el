@@ -16,3 +16,4 @@
 
 (require 'iso-transl)
 
+(show-paren-mode 1)
