@@ -35,6 +35,7 @@
 (quelpa 'dash-at-point)
 (quelpa 'clojure-mode)
 (quelpa 'paredit)
+(quelpa 'helm-company)
 (quelpa 'cider)
 
 (load "00_basic.el")
@@ -47,6 +48,7 @@
 (load "07_smooth-scrolling.el")
 (load "08_flycheck.el")
 (load "09_powerline.el")
+(load "10_cider.el")
 
 (custom-set-variables
  '(initial-frame-alist (quote ((fullscreen . maximized))))) ;; start maximized
@@ -72,4 +74,3 @@
 
 (require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-

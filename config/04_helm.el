@@ -14,15 +14,3 @@
 (define-key evil-normal-state-map " " 'helm-mini)
 
 (global-set-key (kbd "M-x") 'helm-M-x)
-
-(defun helm-my-buffers ()
-  (interactive)
-  (helm-other-buffer '(helm-c-source-buffers-list
-                       helm-c-source-elscreen
-                       helm-c-source-projectile-files-list
-                       helm-c-source-ctags
-                       helm-c-source-recentf
-                       helm-c-source-locate)
-                     "*helm-my-buffers*"))
-
-(evil-leader/set-key "b" 'helm-my-buffers)
