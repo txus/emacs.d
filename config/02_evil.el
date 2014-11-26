@@ -29,6 +29,8 @@
 (define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
 (define-key evil-normal-state-map (kbd "C-j") 'evil-window-bottom)
 
+(define-key evil-visual-state-map (kbd ",co") 'comment-region)
+
 (define-key evil-normal-state-map (kbd "C-u") (lambda ()
                     (interactive)
                     (evil-scroll-up nil)))

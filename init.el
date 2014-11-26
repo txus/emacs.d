@@ -34,7 +34,10 @@
 (quelpa 'dash)
 (quelpa 'dash-at-point)
 (quelpa 'clojure-mode)
+(quelpa 'rspec-mode)
 (quelpa 'paredit)
+(quelpa 'bundler)
+(quelpa 'chruby)
 (quelpa 'helm-company)
 (quelpa 'cider)
 
@@ -74,3 +77,5 @@
 
 (require 'rainbow-delimiters)
 (add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+
+(global-set-key [f12] 'recompile)
